@@ -1,0 +1,22 @@
+{
+  "name": "aevo-edge-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.2",
+  "scripts": {
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "build": "wrangler deploy --dry-run --env preview --outdir dist",
+    "deploy:preview": "wrangler deploy --env preview",
+    "deploy:staging": "wrangler deploy --env staging",
+    "deploy:production": "wrangler deploy --env production"
+  },
+  "devDependencies": {
+    "@types/bun": "1.2.21",
+    "@cloudflare/workers-types": "5.20260922.1",
+    "typescript": "5.8.2",
+    "wrangler": "4.136.1"
+  }
+}

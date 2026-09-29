@@ -1,0 +1,49 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4.136.1/config-schema.json",
+  "name": "aevo-edge-gateway",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-22",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "AEVO_GATEWAY_NAME": "aevo-edge-gateway",
+    "AEVO_APP_CODE": "EDGE",
+    "AEVO_ENVIRONMENT": "local",
+    "AEVO_CORE_API_ORIGIN": "http://127.0.0.1:5099",
+    "AEVO_ALLOWED_ORIGINS": ""
+  },
+  "env": {
+    "preview": {
+      "name": "aevo-edge-gateway-preview",
+      "vars": {
+        "AEVO_GATEWAY_NAME": "aevo-edge-gateway",
+        "AEVO_APP_CODE": "EDGE",
+        "AEVO_ENVIRONMENT": "preview",
+        "AEVO_CORE_API_ORIGIN": "",
+        "AEVO_ALLOWED_ORIGINS": ""
+      }
+    },
+    "staging": {
+      "name": "aevo-edge-gateway-staging",
+      "vars": {
+        "AEVO_GATEWAY_NAME": "aevo-edge-gateway",
+        "AEVO_APP_CODE": "EDGE",
+        "AEVO_ENVIRONMENT": "staging",
+        "AEVO_CORE_API_ORIGIN": "",
+        "AEVO_ALLOWED_ORIGINS": ""
+      }
+    },
+    "production": {
+      "name": "aevo-edge-gateway-production",
+      "vars": {
+        "AEVO_GATEWAY_NAME": "aevo-edge-gateway",
+        "AEVO_APP_CODE": "EDGE",
+        "AEVO_ENVIRONMENT": "production",
+        "AEVO_CORE_API_ORIGIN": "",
+        "AEVO_ALLOWED_ORIGINS": ""
+      }
+    }
+  }
+}
